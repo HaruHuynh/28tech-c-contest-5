@@ -30,6 +30,19 @@ int main() {
     scanf("%d", &x);
     printf("%d\n", countMin(a, n, x));
     printf("%d\n", countMax(a, n, x));
+
+    /*
+    int lon = 0, nho = 0;
+    for(int i = 0; i < n; i++) {
+        if(a[i] > x) {
+            ++lon;
+        }
+        else if(a[i] < x) {
+            ++nho;
+        }
+    }
+    printf("%d\n%d", nho, lon);
+    */
     return 0;
 }
 

@@ -52,5 +52,18 @@ int main() {
     printf("%d\n", countOdd(a, n));
     printf("%d\n", sumEven(a,n));
     printf("%d\n", sumOdd(a, n));
+
+    // int chan = 0, le = 0, tongchan = 0, tongle = 0;
+    // for(int i = 0; i < n; i++) {
+    //     if(a[i] % 2 == 0) {
+    //         ++chan;
+    //         tongchan += a[i];
+    //     }
+    //     else {
+    //         ++le;
+    //         tongle += a[i];
+    //     }
+    // }
+    // printf("%d\n%d\n%d\n%d\n", chan, tongchan, le, tongle);
     return 0;
 }
