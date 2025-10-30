@@ -14,7 +14,7 @@ int count(int a[], int n, int x){
 int min(int a[], int n){
     int min = 1e9;
     for(int i = 0; i < n; i++){
-        if(a[i] < min){
+        if(a[i] < min){ 
             min = a[i];
         }
     }
