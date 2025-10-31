@@ -10,8 +10,7 @@ int main(){
     for(int i = 0; i < n; i++){
         scanf("%lld", &a[i]);
     }
-    ll sumPlus = 0;
-    ll sumPro = 1;
+    ll sumPlus = 0, sumPro = 1;
     for(int i = 0; i < n; i++){
         sumPlus = (sumPlus + a[i]) % MOD;
         sumPro = (sumPro * a[i]) % MOD;

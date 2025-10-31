@@ -4,25 +4,34 @@
 #define ll long long
 
 ll gcd(ll a, ll b){
-    while(b != 0){
-       ll temp = a % b;
-       a = b;
-       b = temp;
-    }
-    return a;
+    if(b == 0)
+        return a;
+    else 
+        return gcd(b, a % b); 
+    // while(b != 0){
+    //    ll temp = a % b;
+    //    a = b;
+    //    b = temp;
+    // }
+    // return a;
 }
 
 int main() {
-    ll n;
-    scanf("%lld", &n);
-    ll a[n];
+    int n;
+    scanf("%d", &n);
+    int a[n];
     for(int i = 0; i < n; i++){
-        scanf("%lld", &a[i]);
+        scanf("%d", &a[i]);
     }
-    ll result = a[0];
-    for(int i = 1; i < n; i++){
-        result = gcd(result, a[i]);
+    ll uc = 0;
+    for(int i = 0; i < n; i++){
+        uc = gcd(uc, a[i]);
     }
-    printf("%lld", result);
+    printf("%lld", uc);
+    // ll result = a[0];
+    // for(int i = 1; i < n; i++){
+    //     result = gcd(result, a[i]);
+    // }
+    // printf("%lld", result);
     return 0;
 }
