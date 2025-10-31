@@ -11,11 +11,10 @@ int main() {
         scanf("%d", &a[i]);
     }
     int min = 1e9;
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < n - 1; i++) {
         for(int j = i + 1; j < n; j++){
-            int diff = abs(a[i] - a[j]);
-            if(diff < min){
-                min = diff;
+            if(abs(a[i] - a[j]) < min){
+                min = abs(a[i] - a[j]);
             }
         }
     }
