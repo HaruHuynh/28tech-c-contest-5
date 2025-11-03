@@ -6,7 +6,7 @@ int main() {
     int a[n];
     for(int i = 0; i < n; i++) scanf("%d", &a[i]);
     
-    int k = -1; // Vị trí của phần tử cần xóa
+    int k = -1; // Đánh dấu trạng thái “chưa tìm thấy”
     for(int i = 0; i < n; i++){
         if(a[i] == x){
             k = i; // Lưu vị trí của phần tử cần xóa
