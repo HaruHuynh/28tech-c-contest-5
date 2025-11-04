@@ -6,10 +6,10 @@ int main() {
     int a[n];
     for(int i = 0; i < n; i++) scanf("%d", &a[i]);
     for(int i = 0; i < n; i++){
-        int check = 1; // Kiểm tra xem a[i] đã được in chưa
+        int check = 1; // đây là lần đầu xuất hiện → đi đếm số lượng.
         for(int j = 0; j < i; j++){
             if(a[i] == a[j]){ 
-                check = 0; // Đã in rồi
+                check = 0; // bỏ qua vì số này đã xuất hiện trước đó rồi.
                 break; 
             }
         }
