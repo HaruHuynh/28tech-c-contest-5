@@ -10,14 +10,14 @@ int main() {
     for(int i = 0; i < n; i++){
         scanf("%d", &a[i]);
         // danh dau la a[i] da xuat hien
-        dem[a[i]]++;
+        dem[a[i]]++; // đếm số lần xuất hiện của a[i]
         if(a[i] > max) max = a[i];
     }
     int tanSuat = 0, res;
     for(int i = 0; i <= max; i++){
-        if(dem[i] > tanSuat){
+        if(dem[i] > tanSuat){ // tìm tần suất lớn nhất
             tanSuat = dem[i];
-            res = i;
+            res = i; // lưu giá trị tương ứng với tần suất lớn nhất
         }
     }
     printf("%d %d", res, tanSuat);

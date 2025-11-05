@@ -16,3 +16,30 @@ In ra hiệu lớn nhất có thể.
 #include <stdio.h>
 #include <stdlib.h> 
 
+int compare(const void *a, const void *b) {
+    return (*(int*)a - *(int*)b);
+}
+
+int main() {
+    int n, k;
+    scanf("%d %d", &n, &k);
+    int a[n];
+    long long sum = 0;
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+        sum += a[i];
+    }
+    qsort(a, n, sizeof(int), compare);
+    long long sumK = 0;
+    for(int i = 0; i < k; i++){
+        sumK += a[i];
+    }
+    long long res1 = (sum - sumK) - sumK;
+    long long res2 = sumK - (sum - sumK);
+    if(res1 > res2) printf("%lld", res1);
+    else printf("%lld", res2);
+    return 0;
+}
+
+
+
